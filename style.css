@@ -1,0 +1,152 @@
+html {
+  --overskrift_1: 5rem;
+  --overskrift_2: 3.125rem;
+  --overskrift_3: 1.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e7eaed;
+}
+
+header {
+  margin: 5rem 0;
+}
+
+.logo {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+main {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+nav {
+  padding: 0 2rem;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li button {
+  border: none;
+  background-color: #899cad;
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 3px 4px 0px 1px #4d5761;
+}
+
+.actor_wrapper h2 {
+  margin-block-end: 2rem;
+}
+
+.actor {
+  border: solid 1px black;
+  padding: 2rem;
+  text-align: center;
+}
+
+.actor .name {
+  margin: 1rem 0;
+}
+
+.actor_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.menu li button:active {
+  box-shadow: 0px 0px 0px 1px #4d5761;
+  transform: translateY(4px);
+  transition: all 0.1s ease-in-out;
+}
+
+.menu li button.chosen {
+  background-color: #1d4061;
+  color: white;
+  box-shadow: 0px 0px 0px 1px #0f2942;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+
+  overflow: scroll;
+}
+
+#popup article {
+  width: 80vw;
+  max-height: 50vh;
+  margin: 4rem auto;
+  border-radius: 25px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: lightblue;
+}
+
+#popup article p {
+  max-width: 50ch;
+}
+
+@media screen and (width > 700px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  #popup article {
+    width: 60vw;
+  }
+}
